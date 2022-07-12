@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+  <style>
+    body {
+      background-color: black;
+    }
+
+    .box {
+      width: 250px;
+      height: 250px;
+      background-color: beige;
+      margin: 3px 0;
+      border-radius: 5px;
+    }
+
+    .special {
+      background-color: aquamarine;
+    }
+
+    #buttons {
+      position: sticky;
+      top: 0px;
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="buttons">
+    <button type="button">Scroll by 100px(y)</button>
+    <button type="button">Scroll to 100px(y)</button>
+    <button type="button">Scroll into special</button>
+  </div>
+
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box special"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+  <div class="box"></div>
+
+  <script>
+    const box = document.getElementsByClassName('special');
+    box[0].addEventListener('click', (e) => {
+      const domRect = box[0].getBoundingClientRect();
+      console.log(domRect);
+      console.log(`client: ${e.clientX}, ${e.clientY}`);
+      console.log(`page: ${e.pageX}, ${e.pageY}`);
+      window.scrollTo(0, 100);
+    });
+
+    const buttons = document.getElementsByTagName('button');
+    buttons[0].addEventListener('click', (e) => {
+      window.scrollBy(0, 100);
+      console.log('button1 clicked');
+    });
+
+    buttons[1].addEventListener('click', (e) => {
+      window.scrollTo(0, 100);
+      console.log('button2 clicked');
+    });
+
+    buttons[2].addEventListener('click', (e) => {
+      console.log('button3 clicked');
+      box[0].scrollIntoView();
+    });
+  </script>
+</body>
+
+</html>

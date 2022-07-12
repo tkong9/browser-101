@@ -1,0 +1,39 @@
+* {
+  border: 0px;
+  padding: 0px;
+}
+
+body {
+  /* cursor: url(img/target.png); */
+  background-color: black;
+  /* cursor: none; */
+  overflow: hidden;
+}
+
+#image {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url('img/target.png');
+  background-size: cover; /* Resize the background image to cover the entire container */
+  transform: translate(-50%, -50%);
+}
+
+#text {
+  color: white;
+  position: absolute;
+}
+
+#vertical {
+  position: absolute;
+  height: 200%;
+  width: 1px;
+  background-color: white;
+}
+
+#horizontal {
+  position: absolute;
+  height: 1px;
+  width: 200%;
+  background-color: white;
+}
