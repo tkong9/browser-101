@@ -16,12 +16,15 @@ body {
   height: 60px;
   background-image: url('img/target.png');
   background-size: cover; /* Resize the background image to cover the entire container */
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
 }
 
 #text {
   color: white;
   position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #vertical {
@@ -29,6 +32,8 @@ body {
   height: 200%;
   width: 1px;
   background-color: white;
+  top: 0;
+  left: 0;
 }
 
 #horizontal {
@@ -36,4 +41,6 @@ body {
   height: 1px;
   width: 200%;
   background-color: white;
+  top: 0;
+  left: 0;
 }
