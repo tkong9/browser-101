@@ -20,7 +20,9 @@ function addToList() {
   });
   li.appendChild(deleteBtn);
   unorderedList.appendChild(li);
+  li.scrollIntoView({ block: 'end' });
   inputBox.value = '';
+  inputBox.focus();
 }
 
 inputBox.addEventListener('keypress', (e) => {
