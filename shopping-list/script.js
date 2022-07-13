@@ -22,3 +22,10 @@ function addToList() {
   unorderedList.appendChild(li);
   inputBox.value = '';
 }
+
+inputBox.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    // addBtn.click();
+    addToList();
+  }
+});
