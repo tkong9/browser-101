@@ -7,6 +7,13 @@ addBtn.addEventListener('click', addToList);
 
 const inputBox = document.querySelector('input');
 
+unorderedList.addEventListener('click', (e) => {
+  if (e.target.tagName === 'BUTTON') {
+    e.target.closest('li').remove();
+  }
+  console.log(e);
+});
+
 function addToList() {
   if (inputBox.value == '') return;
   const li = document.createElement('li');
@@ -15,9 +22,6 @@ function addToList() {
   deleteBtn.type = 'button';
   deleteBtn.textContent = 'X';
   deleteBtn.setAttribute('class', 'delete-btn');
-  deleteBtn.addEventListener('click', () => {
-    li.remove();
-  });
   li.appendChild(deleteBtn);
   unorderedList.appendChild(li);
   li.scrollIntoView({ block: 'end' });
