@@ -1,0 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+}
+
+#background {
+  background-image: url(img/background.png);
+  background-color: #cccccc;
+  height: 350px;
+  width: 70%;
+  margin: 300px auto;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  position: relative;
+  min-width: 550px;
+}
+
+#play-btn {
+  position: absolute;
+  top: 10px;
+  left: calc(50% - 20px);
+  width: 40px;
+  height: 40px;
+  background-color: #cccccc;
+  border: 3px solid black;
+  font-size: 36px;
+  text-align: center;
+}
+
+#timer {
+  width: 100px;
+  position: absolute;
+  top: 60px;
+  left: calc(50% - 50px);
+  height: 30px;
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid black;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 30px;
+}
+
+#bug-catch-counter {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  left: calc(50% - 25px);
+  background-color: lightsalmon;
+  position: absolute;
+  top: 100px;
+  left: calc(50% - 20px);
+  border: 3px solid black;
+  text-align: center;
+  line-height: 40px;
+  font-size: 30px;
+}
+
+#catch-area {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  top: 50%;
+}
+
+@media screen and (min-width: 880px) {
+  #background {
+    width: 620px;
+  }
+}
