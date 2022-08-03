@@ -68,7 +68,8 @@ body {
   top: 50%;
 }
 
-.carrot-img {
+.carrot-img,
+.bug-img {
   position: absolute;
   width: 60px;
   height: 60px;

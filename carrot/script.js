@@ -31,14 +31,22 @@ playBtn.addEventListener('click', () => {
 bugCatchCnt.innerHTML = '0';
 const catchAreaRect = catchArea.getBoundingClientRect();
 
-function generateCarrors() {
-  // let x = Math.floor(Math.random() * 100 + 1);
-  let x = Math.floor(Math.random() * (catchAreaRect.width - 60));
-  let y = Math.floor(Math.random() * (catchAreaRect.height - 60));
-  console.log(`x: ${x}, y: ${y}`);
-  let carrot = makeCarrot(x, y);
-  catchArea.append(carrot);
-  console.log(carrot);
+function generateCarrots() {
+  for (let i = 0; i < 10; i++) {
+    let x = Math.floor(Math.random() * (catchAreaRect.width - 60));
+    let y = Math.floor(Math.random() * (catchAreaRect.height - 60));
+    let carrot = makeCarrot(x, y);
+    catchArea.append(carrot);
+  }
+}
+
+function generateBugs() {
+  for (let i = 0; i < 10; i++) {
+    let x = Math.floor(Math.random() * (catchAreaRect.width - 60));
+    let y = Math.floor(Math.random() * (catchAreaRect.height - 60));
+    let bug = makeBug(x, y);
+    catchArea.append(bug);
+  }
 }
 
 function makeCarrot(x, y) {
@@ -51,8 +59,15 @@ function makeCarrot(x, y) {
   return carrot;
 }
 
-function makeBug(x, y) {}
-
-for (let i = 0; i < 10; i++) {
-  generateCarrors();
+function makeBug(x, y) {
+  const bug = document.createElement('img');
+  bug.setAttribute('src', './img/bug.png');
+  bug.setAttribute('alt', 'bug');
+  bug.className = 'bug-img';
+  bug.style.left = `${x}px`;
+  bug.style.top = `${y}px`;
+  return bug;
 }
+
+generateCarrots();
+generateBugs();
