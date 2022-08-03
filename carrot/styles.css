@@ -68,6 +68,12 @@ body {
   top: 50%;
 }
 
+.carrot-img {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+}
+
 @media screen and (min-width: 880px) {
   #background {
     width: 620px;
