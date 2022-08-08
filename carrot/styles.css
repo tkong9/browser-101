@@ -71,8 +71,26 @@ body {
 .carrot-img,
 .bug-img {
   position: absolute;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+}
+
+.carrot-img:hover,
+.bug-img:hover {
+  transform: scale(1.2);
+}
+
+#lost {
+  width: 50%;
+  height: 150px;
+  position: absolute;
+  left: calc(25%);
+  bottom: 50px;
+  background-color: rgba(255, 255, 255, 0.5) /* white with 50% opacity */;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
 }
 
 @media screen and (min-width: 880px) {
