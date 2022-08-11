@@ -81,7 +81,8 @@ body {
   transform: scale(1.2);
 }
 
-#lost {
+#lost,
+#win {
   width: 50%;
   height: 150px;
   position: absolute;
@@ -91,6 +92,7 @@ body {
   text-align: center;
   line-height: 75px;
   font-size: 30px;
+  border-radius: 18px;
 }
 
 @media screen and (min-width: 880px) {
